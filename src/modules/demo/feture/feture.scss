@@ -1,0 +1,88 @@
+@import "../../../style/main.scss";
+
+.feture-title{
+    text-align: center;
+    padding: 100px 240px;
+    span{
+        @include font-md;
+            font-weight: 700;
+            display: block;
+            padding: 0 0 30px 0;
+            color: var(--theme-color-blue);
+    }
+    h2{
+        @include heading2;
+        line-height: 60px;
+        padding: 0 0 30px 0;
+    }
+    p{
+        @include paragraph;
+        color: var(--theme-color-gray);
+    }
+}
+.feture-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 120px ;
+    margin: 0 0 100px 0;
+    .feture-grid-details{
+        h2{
+            @include heading2;
+            line-height: 60px;
+            padding: 0 0 30px 0;
+        }
+        p{
+            @include paragraph;
+            color: var(--theme-color-gray);
+        }
+    }
+}
+.feture-grid-details-border{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.21);
+    padding-bottom: 100px;
+}
+.feture-grid-two{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 120px ;
+    margin: 0 0 100px 0;
+    .feture-grid-details-two{
+        span{
+            @include font-md;
+                font-weight: 700;
+                display: block;
+                padding: 0 0 30px 0;
+                color: var(--theme-color-blue);
+        }
+        h2{
+            @include heading2;
+            line-height: 60px;
+            padding: 0 0 30px 0;
+        }
+        p{
+            @include paragraph;
+            color: var(--theme-color-gray);
+        }
+        .feture-details-flex-items{
+            padding: 22px 261px 0 0px;
+            align-items: center;
+            display: flex;
+            gap: 45px;
+            span{
+                padding: 0;
+                font-size: 30px;
+                display: block;
+            }
+            p{
+                @include paragraph;
+                color: black;
+            }
+
+        }
+        .feture-details-flex{
+            margin-top: 20px;
+        }
+    }
+}

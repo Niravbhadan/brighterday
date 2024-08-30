@@ -1,0 +1,49 @@
+@import "../../../style/main.scss";
+
+.benefitbenner-color{
+    background: linear-gradient(295.36deg, #003465 0%, #070346 83.92%);    
+    .benefitbenner-details{
+        padding: 200px 100px;
+        span{
+            @include font-md;
+            font-weight: 700;
+            display: block;
+            padding: 0 0 30px 0;
+            color: var(--theme-color-blue);
+        }
+        h2{
+            @include heading2;
+            line-height: 60px;
+            color: var(--theme-color-white);
+            padding-bottom: 90px;
+        }
+        .benefitbenner-details-flex{
+            display: flex;
+            align-items: center;
+            .benefitbenner-details-flex-items{
+                padding: 0 20px;
+                align-items: center;
+                display: flex;
+                gap: 30px;
+                span{
+                    padding: 0;
+                    font-size: 30px;
+                    display: block;
+                }
+                p{
+                    @include paragraph;
+                    color: var(--theme-color-white);
+                }
+
+            }
+        }
+    }
+}
+.benefitbenner-logo{
+    padding: 100px 0;
+    border-bottom: 1px  solid rgba(128, 128, 128, 0.176);
+    img{
+        width: 170px;
+        margin: 0 70px;
+    }
+}

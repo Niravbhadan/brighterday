@@ -1,0 +1,85 @@
+@import "../../../style/main.scss";
+
+.solution-main-div{
+    position: relative;
+    padding: 100px 0;
+    background-color: var(--theme-color-background);
+    .solution-title{
+        h3{
+            @include heading2;
+            margin: 0 0 40px 0;
+            @media (max-width:576px) {
+               @include font24;
+            }
+        }
+    }
+    .solution-grid{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 0 125px;
+        @media (max-width:768px) {
+            gap: 0 20px;
+        }
+        @media (max-width:576px) {
+            
+            grid-template-columns: repeat(1 , 1fr);
+        }
+        .solution-grid-first-items{
+            p{
+                @include font-md;
+                font-size:18px;
+                line-height: 30px;
+                margin-bottom: 30px;
+                font-weight: 400;
+            }
+            span{
+                @include font-md;
+                font-weight: 400;
+                font-size:18px;
+                line-height: 30px;
+                color: var(--theme-color-gray);
+                letter-spacing: 0.1px;
+            }
+        }
+        .solution-grid-second{
+            margin-top: 250px;
+            @media (max-width:576px) {
+                margin: 0;
+            }
+            .solution-img{
+                background-image: url(../../../assets/images/new-graph.png);
+                background-repeat: no-repeat;
+                position: absolute;
+                background-size: cover;
+                top: 0;
+                right: 0;
+                height: 380px;
+                width: calc(50% - 62px);
+            }
+            .solution-grid-second-items{
+                span{
+                    @include font-md;
+                    font-weight: 400;
+                    font-size:18px;
+                    line-height: 30px;
+                    color: var(--theme-color-gray);
+                    letter-spacing: 0.1px;
+                    display: block;
+                }
+                .solution-grid-second-items-span{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+.solution-img{
+    background-image: url(../../../assets/images/new-graph.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    height: 380px;
+    width: calc(50% - 62px);
+}

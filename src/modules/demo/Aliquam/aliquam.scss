@@ -1,0 +1,26 @@
+@import "../../../style/main.scss";
+
+.aliquam-color{
+    background-color: var(--theme-color-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    text-align: center;
+    h3{
+        @include heading2;
+        line-height: 60px;
+        padding: 0 300px;
+        margin-bottom: 30px
+    }
+    .aliquam-btn{
+        button{
+            @include button-lg;
+            color: var(--theme-color-white);
+            background-color: #009BF4     ;
+            border-radius: 8px;
+        }
+    }
+    
+}

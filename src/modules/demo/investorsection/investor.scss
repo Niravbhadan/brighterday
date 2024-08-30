@@ -1,0 +1,54 @@
+@import "../../../style/main.scss";
+
+.investor-color{
+    background: radial-gradient(59.08% 74.86% at 94.66% 21.4%, rgba(0, 155, 244, 0.15) 0%, rgba(0, 155, 244, 0) 100%);
+    .investor-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 100px 15px;
+        gap: 40px;
+        align-items: center;
+        .investor-grid-title{
+            span{
+                @include font-md;
+                font-weight: 700;
+                display: block;
+                padding: 0 0 10px 0;
+                color: var(--theme-color-blue);
+            }
+            h1{
+                @include heading1;
+                padding: 0 0 40px 0;
+            }
+            p{
+                @include paragraph;
+                color: var(--theme-color-gray);
+                padding: 0 0 40px 0;
+            }
+            .investor-btn{
+                .investor-btn-one{
+                    @include button-lg;
+                    color: var(--theme-color-white);
+                    background-color: var(--theme-color-blue);
+                    border-radius: 8px;
+                    margin-right: 20px;
+                    font-weight: bold;
+                }
+                .investor-btn-two{
+                    @include button-lg;
+                    color: var(--theme-color-blue);
+                    font-weight: bold;
+
+                }
+            }
+        }
+        .investor-grid-img{
+
+            img{
+                height: 600px;
+                width: 600px;
+                object-fit: cover;
+            }
+        }
+    }
+}

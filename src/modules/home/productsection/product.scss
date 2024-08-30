@@ -1,0 +1,71 @@
+@import "../../../style/main.scss";
+
+.product-color{
+    background-color: var(--theme-color-background);
+    .container{
+        .product-title{
+            h2{
+                @include heading2;
+                padding: 100px 0;
+                @media (max-width:576px) {
+                    @include font34;
+                    font-size: 32px;
+                    padding: 70px 0;
+                }
+            }
+        }
+    }
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 60px 145px;
+        padding-bottom: 100px;
+        @media (max-width:768px) {
+            gap: 30px 10px;
+        }
+        @media (max-width:576px) {
+            grid-template-columns: repeat(1 , 1fr);
+        }
+        .product-grid-items-img{
+            img{
+                width: 90px;
+                height: 40px;
+                @media (max-width:768px) {
+                    width: 40px;
+                }
+            }
+        }
+        .product-grid-items{
+            @include none-flex;
+            gap: 40px;
+            align-items: flex-start;
+            @media (max-width:768px) {
+                display: grid;
+                grid-template-columns: repeat(1  , 1fr);
+            }
+            @media (max-width:576px) {
+                grid-template-columns: 45px 1fr;
+                gap: 10px;
+            }
+            .product-grid-items-details{
+                h6{
+                    @include heading3;
+                    margin-bottom: 18px;
+                }
+                p{
+                    @include paragraph;
+                    color: var(--theme-color-gray);
+                    margin-bottom: 20px;
+                }
+                a{
+                    @include paragraph;
+                    color: var(--theme-color-blue);
+                    font-weight: bold;
+                    font-size: 16px;
+                    
+                }
+            }
+
+        }
+    }
+}

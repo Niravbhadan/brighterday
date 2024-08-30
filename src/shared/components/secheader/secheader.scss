@@ -1,0 +1,48 @@
+@import "../../../style/main.scss";
+
+.secheader-color{
+    
+    .secheader-flex{
+        @include flex-with-justify ;
+        align-items: center;
+        padding: 20px 40px;
+        border-bottom: 1px solid var(--theme-color-border-color);
+        h3{
+            @include heading3 ;
+        }
+        .secheader-items{
+            @media (max-width:768px) {
+                display: none;
+            }
+            a{
+                padding: 0px 30px;
+                @include font-md;
+                font-weight: 600;
+                color: rgba(38, 38, 38, 0.6);
+                text-decoration: none
+            }
+        }
+        .secheader-butoon{
+            .secheader-btn-1{
+                @include button-lg;
+                color: var(--theme-color-white);
+                background-color: var(--theme-color-blue);
+                border-radius: 10px;
+                padding: 8px 20px;
+                margin-right: 20px;
+                font-weight: 700;
+                @media (max-width:576px) {
+                    display: none;
+                }
+            }
+            .secheader-btn-2{
+                @include button-lg;
+                background-color: var(--theme-color-shadow-color);
+                border-radius: 10px;
+                padding: 8px 20px;
+                font-weight: 600;
+
+            }
+        }
+    }
+}

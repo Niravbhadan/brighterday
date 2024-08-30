@@ -1,0 +1,87 @@
+@import "../../../style/main.scss";
+
+.process-color{
+    background-color: var(--theme-color-background);
+    .container{
+        .process-title{
+            padding: 100px 0;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+            @media (max-width:768px) {
+                padding: 80px 0;
+            }
+            span{
+                color: var(--theme-color-blue);
+                font-weight: 500;
+                padding: 0 0 40px 0;
+                display: block;
+                @media (max-width:768px) {
+                    @include font-md;
+                }
+            }
+            h2{
+                @include heading2;
+                margin: 0 0 50px 0;
+                @media (max-width:768px) {
+                    @include font36;
+                    margin-bottom: 40px;
+                }
+                
+            }
+            p{
+                @include paragraph;
+                color: var(--theme-color-gray);
+            }
+        }
+        .process-grid{
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            gap: 80px 60px ;
+            @media (max-width:768px) {
+                grid-template-columns: repeat(2 , 1fr);
+                gap: 60px;
+            }
+            @media (max-width:576px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .process-grid-items-num{
+                background-color: var(--theme-color-white);
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50px;
+                margin: 0 0 40px 0;
+                .process-grid-items-num-p{
+                    color: var(--theme-color-blue);
+                    font-size: 20px;
+                    font-weight: bold;
+                    
+                }
+            }
+            h3{
+                margin: 30px 0px;
+                @media (max-width:768px) {
+                    @include font18;
+                }
+                @media (max-width:576px) {
+                    font-size: 20px;
+                }
+            }
+            p{
+                @include paragraph;
+                color: var(--theme-color-gray);
+                @media (max-width:768px) {
+                    @include font-md;
+                }
+                @media (max-width:576px) {
+                    @include font18;
+                    letter-spacing: -0.3px;
+                }
+            }
+
+        }
+    }
+}

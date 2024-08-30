@@ -1,0 +1,23 @@
+@import "../../../style/main.scss";
+
+.subheader-color{
+    background-color: var(--theme-color-dark-blue);
+    position: sticky;
+    top: 0;
+    .container{
+        padding: 20px 0;
+        .subheader-position{
+            text-align: center;
+            a{
+                &:hover{
+                    color: #fff
+                }
+                @include font-md;
+                color:  rgba(255, 255, 255, 0.6);
+                padding: 0 60px 0 0  ;
+                transition: .2s ease-in-out;
+                text-decoration: none;
+            }
+        }
+    }
+}

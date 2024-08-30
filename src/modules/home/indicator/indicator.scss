@@ -1,0 +1,120 @@
+@import "../../../style/main.scss";
+
+.indicator-title{
+    max-width: 670px;
+    padding: 100px 0;
+    h3{
+        @include heading2;
+        padding-bottom: 30px;
+        @media (max-width:768px) {
+            @include font36;
+        }
+    }
+    p{
+        @include paragraph;
+        color: var(--theme-color-gray);
+    }
+}
+.indicator-grid{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 0 100px;
+    @media (max-width:768px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 10px;
+    }
+    @media (max-width:576px) {
+        grid-template-columns: repeat( 1 ,1fr);
+    }
+    .indicator-grid-title{
+        .indicator-grid-title-details-one{
+            @include none-flex;
+            margin: 0 0 40px 0;
+            
+            .indicator-grid-title-details-color{
+                background-color: var(  --theme-color-primary);
+                width: 4px;
+                margin-right:20px ;
+            }
+            a{
+                @include heading3;
+                font-weight: bold;
+            }
+        }
+        .indicator-grid-title-details-two{
+            @include none-flex;
+            margin: 0 0 40px 0;
+            .indicator-grid-title-details-color{
+                background-color: var(   --theme-color-blue);
+                width: 4px;
+                margin-right:20px ;
+            }
+            a{
+                @include heading3;
+                font-weight: bold;
+                color: var(--theme-color-gray);
+            }
+        }
+        .indicator-grid-title-details-three{
+            @include none-flex;
+            margin: 0 0 40px 0;
+            .indicator-grid-title-details-color{
+                background-color: orange;
+                width: 4px;
+                margin-right:20px ;
+            }
+            a{
+                @include heading3;
+                font-weight: bold;
+                color: var(--theme-color-gray);
+            }
+        }
+    }
+    .indicator-grid-items{
+        padding-bottom: 100PX;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 20px 10px;
+        @media (max-width:768px) {
+            grid-template-columns: repeat(1 , 1fr);
+        }
+        .indicator-grid-items-detsils{
+            border: 1px solid rgba(128, 128, 128, 0.094) ;
+            border-radius: 10px;
+            p{
+                @include paragraph;
+                padding: 20px;
+                font-weight: 500;
+           
+            }
+        }
+    }
+}
+.indicator-img{
+    background-image: url(../../../assets/images/team-banner.png);
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include flex-with-justify-center;
+    align-items: center;
+    text-align: center;
+    @media (max-width:576px) {
+        height: 300px;
+    }
+    h2{
+        @include heading2;
+        color: var(--theme-color-white);
+        padding: 0 364px;
+        line-height: 60px;
+        @media (max-width:768px) {
+            @include font36;
+            padding: 0 50px;
+        }
+        @media (max-width:576px) {
+            @include font24;
+            padding: 0 20px;
+        }
+    }
+}
